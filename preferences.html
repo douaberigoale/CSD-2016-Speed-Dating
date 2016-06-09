@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="css/main.css" rel="stylesheet">
+    <title>Persönliche Angaben - CSD 2016 Speed Dating Anmeldung</title>
+</head>
+<body>
+<div class="panel panel-default center-main container" >
+    <div class="panel-heading">
+        <h3 class="panel-title">Persönliche Angaben</h3>
+    </div>
+    <div class="panel-body">
+        <p>Wir möchten Dir ausreichend Zeit geben, jeden deiner Gesprächspartner intensiv kennen lernen zu können. Damit das Speeddating aber insgesamt nicht zu lange dauert, ist es eventuell notwendig, die Liste möglicher Gesprächspartner für Dich zu begrenzen. </p>
+        <p>  Damit es nicht vom Zufall abhängt mit wem Du "gepaart" wirst und mit wem nicht, möchten wir Dir nun ein paar Fragen zu deinen Vorlieben und Wünschen stellen. Basierend auf Deinen Antworten wählt unser Computerprogramm dann die besten Gesprächspartner für Dich aus.</p>
+            <div class="panel-body">
+                <label>Mit welchem Ziel kommst du zum Speeddating?</label>
+                <h6>Du kannst bis zu zwei Antworten auswählen.</h6>
+                <ul>
+                    <label class="checkbox">
+                        <input type="checkbox" id="goal1" value="rom"> Romantik - Die große Liebe finden.
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" id="goal2" value="flirt"> Flirten - Eine heiße Nacht erleben.
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" id="goal3" value="party"> Party - Einfach bloß Spaß haben.
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" id="goal4" value="schnuppern"> Schnuppern - Mal etwas Neues ausprobieren.
+                    </label>
+                </ul>
+            </div>
+            <div class="panel-body">
+                <label>In welcher Altersspanne sollten deine Gesprächspartner idealerweise liegen?</label><br>
+                (//TODO RANGE SLIDER)
+                <br>
+                <input type="text" placeholder="Mindestens"><input type="text" placeholder="Maximal">
+
+            </div>
+            <div class="btn-group pull-right">
+                <button type="submit" class="btn btn-default" onclick="location.href='personal.html';">Zurück</button>
+                <button type="submit" class="btn btn-primary" onclick="location.href='interests.html';">Weiter</button>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped active" role="progressbar"
+                     aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width:25%">
+                </div>
+            </div>
+    </div>
+</div>
+</body>
+</html>

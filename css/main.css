@@ -1,0 +1,32 @@
+.center-main {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+.panel-heading {background-color: #ffa72d !important}
+.progress-bar {background-color: #ffa72d !important}
+.btn-primary {background-color: #ffa72d;   border-color: #ffa60c; !important}
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active
+{
+    background-color: #ff8d13;
+    border-color: #ffa60c;!important
+}
+
+.btn-primary:hover
+{
+    background-color: #ff8d13;
+    border-color: #ffa60c;!important
+}
+.btn-primary:active:focus {
+    color: #ffffff;
+    background-color: #ff8a04;
+    border-color: #ff7e03;
+}
+.progress {height: 34px !important;}
+.panel > .panel-heading {
+    color: white;
+}
