@@ -6,7 +6,11 @@
     transform: translate(-50%, -50%);
 }
 .panel-heading {background-color: #ffa72d !important}
-.progress-bar {background-color: #ffa72d !important}
+
+.progress-bar {
+    background-color: #ffa72d;
+!important
+}
 .btn-primary {background-color: #ffa72d;   border-color: #ffa60c; !important}
 .btn-primary:focus,
 .btn-primary:active,
@@ -29,4 +33,23 @@
 .progress {height: 34px !important;}
 .panel > .panel-heading {
     color: white;
+}
+
+#showcase {
+    margin: 0 20px;
+    text-align: center;
+}
+
+#age {
+    height: 20px;
+    margin: 20px;
+}
+
+#value-span,
+#value-input {
+    width: 50%;
+    float: left;
+    display: block;
+    text-align: center;
+    margin: 0;
 }

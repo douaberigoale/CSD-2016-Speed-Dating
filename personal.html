@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
-      xmlns="http://www.w3.org/1999/html">
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <!-- Latest compiled and minified CSS -->
@@ -11,79 +11,92 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+
+    <script src="js/dropdown.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/validator.js"></script>
+    <script src="js/main.js"></script>
+
     <title>Persönliche Angaben - CSD 2016 Speed Dating Anmeldung</title>
 </head>
 <body>
+<form role="form" data-toggle="validator" action="speeddating.html" method="get">
 <div class="panel panel-default center-main container">
+
     <div class="panel-heading">
         <h3 class="panel-title">Persönliche Angaben</h3>
     </div>
     <div class="panel-body">
-    <div class="panel-body">
-        <div class="form-group">
-            <label for="name" class="control-label">Hallo, wie heißt Du?</label>
-            <input type="text" class="form-control" id="name" placeholder="Dein Name">
+        <div class="panel-body">
+            <div class="form-group">
+                <label for="name" class="control-label">Hallo, wie heißt Du?</label>
+                <input type="text" class="form-control" id="name" name="name" pattern="^[a-zA-Z]+$"
+                       placeholder="Dein Name"
+                       required>
+            </div>
+        </div>
+        <div class="panel-body">
+            <label for="name">Bist du ein Mann oder eine Frau?</label>
+            <h6>Wir wissen, dass die Frage nach dem Geschlecht für manche nicht einfach zu beantworten ist, aufgrund
+                der vielen Ausprägungen an sexuellen Identitäten, die existieren. Aber aus organisatorischen Gründen
+                können wir leider nur diese zwei Kategorien anbieten. Wir bitten dich darum die Antwort auszuwählen,
+                die am ehesten zu Dir passt.</h6>
+            <label class="radio-inline">
+                <input type="radio" name="gender" id="m" value="m"> Männlich
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="gender" id="f" value="f"> Weiblich
+            </label>
+        </div>
+        <div class="panel-body">
+            <label>In welchem Jahr wurdest du geboren?</label>
+            </br>
+            <div class="col-sm-2" style="  padding-left: 0px;">
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker'>
+                        <input type='text' class="form-control" name="year" id="year" required/>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar">
+                    </span>
+                </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <label for="name">Wie würdest Du Dich selbst beschreiben?</label>
+            <h6>Aus organisatorischen Gründen können wir leider nur diese vier Kategorien zur Wahl anbieten.
+                Wähle
+                darum bitte die Antwort aus, die am ehesten zu Dir passt.</h6>
+            <label class="radio-inline">
+                <input type="radio" name="sexuality" id="g" value="g"> Schwul
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="sexuality" id="l" value="l"> Lesbisch
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="sexuality" id="b" value="b"> Bisexuell
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="sexuality" id="h" value="h"> Hetero
+            </label>
+        </div>
+        <div class="help-block with-errors"></div>
+        <div class="btn-group pull-right">
+            <input type="button" class="btn btn-primary" onclick="history.back();" value="Zurück">
+            <button type="submit" class="btn btn-primary">Weiter
+            </button>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar"
+                 aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:25%">
+            </div>
         </div>
     </div>
-    <div class="panel-body">
-        <label for="name">Bist du ein Mann oder eine Frau?</label>
-        <h6>Wir wissen, dass die Frage nach dem Geschlecht für manche nicht einfach zu beantworten ist, aufgrund der vielen Ausprägungen an sexuellen Identitäten, die existieren. Aber aus organisatorischen Gründen können wir leider nur diese zwei Kategorien anbieten. Wir bitten dich darum die Antwort auszuwählen, die am ehesten zu Dir passt.</h6>
-        <label class="radio-inline">
-            <input type="radio" name="gender" id="m" value="m"> Männlich
-        </label>
-        <label class="radio-inline">
-            <input type="radio" name="gender" id="f" value="f"> Weiblich
-        </label>
-    </div>
-    <div class="panel-body">
-        <label>In welchem Jahr wurdest du geboren?</label>
-        <input type="text" class="form-control" id="year" placeholder="Dein Geburtsjahr"> <!-- TODO DATETIMEPICKER FOR AGE -->
-        <!--                <div class="container">
-                            <div class="row">
-                                <div class='col-sm-6'>
-                                    <div class="form-group">
-                                        <div class='input-group date' id='datetimepicker1'>
-                                            <input type='text' class="form-control" />
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <script type="text/javascript">
-                                    $(function () {
-                                        $('#datetimepicker1').datetimepicker();
-                                    });
-                                </script>
-                            </div>
-                        </div>-->
-    </div>
-    <div class="panel-body">
-        <label for="name">Wie würdest Du Dich selbst beschreiben?</label>
-        <h6>Aus organisatorischen Gründen können wir leider nur diese vier Kategorien zur Wahl anbieten. Wähle darum bitte die Antwort aus, die am ehesten zu Dir passt.</h6>
-
-        <label class="radio-inline">
-            <input type="radio" name="sexuality" id="gay" value="gay"> Schwul
-        </label>
-        <label class="radio-inline">
-            <input type="radio" name="sexuality" id="les" value="les"> Lesbisch
-        </label>
-        <label class="radio-inline">
-            <input type="radio" name="sexuality" id="bi" value="bi"> Bisexuell
-        </label>
-        <label class="radio-inline">
-            <input type="radio" name="sexuality" id="het" value="het"> Hetero
-        </label>
-    </div>
-    <div class="btn-group pull-right">
-        <button type="submit" class="btn btn-default" onclick="location.href='index.html';">Zurück</button>
-        <button type="submit" class="btn btn-primary" onclick="location.href='preferences.html';">Weiter</button>
-    </div>
-    <div class="progress progress-striped active">
-        <div class="progress-bar progress-bar-warning" role="progressbar" data-transitiongoal="0"></div>
-    </div>
 </div>
-    </div>
+</form>
 </body>
 </html>

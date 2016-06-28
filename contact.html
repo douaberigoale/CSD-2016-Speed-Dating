@@ -12,14 +12,16 @@
     <!-- Latest compiled JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link href="css/main.css" rel="stylesheet">
+
+    <script src="js/validator.js"></script>
     <title>Kontaktdaten - CSD 2016 Speed Dating Anmeldung</title>
 </head>
 <body>
+<form role="form" data-toggle="validator" action="submit.html" method="get">
 <div class="panel panel-default center-main container">
     <div class="panel-heading">
         <h3 class="panel-title">Kontaktdaten</h3>
     </div>
-    <form role="form" data-toggle="validator">
     <div class="panel-body">
         <p>Wenn nach einem Gespräch sowohl du als auch dein Gesprächspartner ankreuzen, dass ihr beide Interesse aneinander habt, dann geben wir euch am Ende die hinterlegten Kontaktdaten des jeweils anderen. Damit ist sichergestellt, dass ihr immer noch euer nächstes Date vereinbaren könnt, selbst wenn ihr euch direkt nach dem Speeddating aus den Augen verlieren solltet. </p>
         <div class="panel-body">
@@ -27,17 +29,22 @@
                 Welche Kontaktdaten sollen wir für dich hinterlegen?
             </label>
             <h6>Als Kontaktdaten kannst du zum Beispiel deine E-Mail-Adresse, Handynummer oder ähnliches angeben. Du kannst das Feld aber auch frei lassen. Alle deine Daten werden nach dem 17. August gelöscht.</h6>
-            <input type="text" class="form-control" placeholder="Kontakdaten">
-        </div>
-        <div class="panel-body">
-            <label>
-                Möchtest Du uns Deine E-Mail-Adresse verraten?
-            </label>
-            <h6>Wir halten deine E-Mail-Adresse geheim. Wir nutzen sie nur um dich über das CSD Speeddating zu informieren und um deine Anmeldung zu bestätigen. Alle deine Daten werden nach dem 17. August gelöscht.</h6>
+            <div class="form-group">
+                <input type="text" class="form-control" required placeholder="Name"></br>
+                <input type="phone" class="form-control" required pattern="^[0-9]*$"
+                       placeholder="Deine Telefonnummer"></br>
             <div class="input-group">
                 <span class="input-group-addon">@</span>
-                <input type="email" class="form-control" placeholder="E-Mail-Adresse">
+                <input type="email" class="form-control" required placeholder="E-Mail-Adresse">
             </div>
+                <div class="help-block with-errors"></div>
+            </div>
+            <!--        </div>
+                    <div class="panel-body">
+                        <label>
+                            Möchtest Du uns Deine E-Mail-Adresse verraten?
+                        </label>
+                        <h6>Wir halten deine E-Mail-Adresse geheim. Wir nutzen sie nur um dich über das CSD Speeddating zu informieren und um deine Anmeldung zu bestätigen. Alle deine Daten werden nach dem 17. August gelöscht.</h6>-->
         </div>
 
         <div class="panel-body">
@@ -49,16 +56,16 @@
             </label>
         </div>
         <div class="btn-group pull-right">
-            <button type="submit" class="btn btn-default" onclick="location.href='preferences2.html';">Zurück</button>
-            <button type="submit" class="btn btn-primary" onclick="location.href='end.html';">Fertig</button>
+            <input type="button" class="btn btn-primary" onclick="history.back();" value="Zurück">
+            <button type="submit" class="btn btn-primary">Fertig</button>
         </div>
         <div class="progress">
             <div class="progress-bar progress-bar-striped active" role="progressbar"
-                 aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                 aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:75%">
             </div>
         </div>
     </div>
-    </form>
 </div>
+</form>
 </body>
 </html>
