@@ -11,6 +11,7 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
     <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 
@@ -26,12 +27,12 @@
 <form role="form" data-toggle="validator" action="speeddating.html" method="get">
 <div class="panel panel-default center-main container">
     <div class="panel-heading">
-        <h3 class="panel-title">Persönliche Angaben</h3>
+        <h3 class="panel-title">Persönliche Angaben (1/2)</h3>
     </div>
     <div class="panel-body">
         <div class="panel-body">
             <div class="form-group">
-                <label for="name" class="control-label required">Hallo, wie heißt Du?</label>
+                <label for="name" class="control-label required">Hallo, wie heißt du? (Du kannst auch einen Spitznamen angeben)</label>
                 <input type="text" class="form-control" id="name" name="name" pattern="^[a-zA-Z]+$"
                        placeholder="Dein Name"
                        required>
@@ -51,16 +52,16 @@
             </label>
         </div>
         <div class="panel-body">
-            <label for="name" class="required">Leute welchem Geschlecht möchtest du am Speed Dating treffen?</label>
+            <label for="name" class="required">Du bist auf der Suche nach:</label>
             </br>
             <label class="radio-inline">
-                <input type="radio" name="sexuality" id="mS" value="m" required> Männer
+                <input type="radio" name="sexuality" id="mS" value="m" required> Männern
             </label>
             <label class="radio-inline">
                 <input type="radio" name="sexuality" id="fS" value="f"> Frauen
             </label>
             <label class="radio-inline">
-                <input type="radio" name="sexuality" id="bS" value="b"> Beides
+                <input type="radio" name="sexuality" id="bS" value="b"> Beiden
             </label>
             <!--            <label for="name">Wie würdest Du Dich selbst beschreiben?</label>
                         <h6>Aus organisatorischen Gründen können wir leider nur diese vier Kategorien zur Wahl anbieten.
