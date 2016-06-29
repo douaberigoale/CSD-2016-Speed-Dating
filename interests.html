@@ -63,13 +63,14 @@
                 </label>
             </ul>
         </div>
-        <div class="btn-group pull-right">
-            <input type="button" class="btn btn-primary" onclick="history.back();" value="Zurück">
-            <button type="submit" class="btn btn-primary">Weiter</button>
-        </div>
-        <div class="progress progress-bar progress-bar-striped active"
-             value="60" max="100" style="width:85%">
-
+        <div class="row">
+            <div class="progress progress-striped active" style="width: 80%; margin: 0px auto; height: 40px; float:left">
+                <div id="progressbar" class="progress-bar progress-bar-success" role="progressbar" style="width:60%;"></div>
+            </div>
+            <div style="display: inline; float:right; position:relative; left:10px;">
+                <input type="button" class="btn btn-primary" onclick="history.back();" value="Zurück">
+                <button type="submit" class="btn btn-primary">Weiter</button>
+            </div>
         </div>
     </div>
 </div>
