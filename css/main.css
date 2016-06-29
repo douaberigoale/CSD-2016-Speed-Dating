@@ -53,3 +53,7 @@
     text-align: center;
     margin: 0;
 }
+.required:after {
+    content:" *";
+    color: darkred;
+}
